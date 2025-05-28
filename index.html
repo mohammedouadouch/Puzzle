@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Puzzle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jeu de Puzzle</h1>
+            <p>Assemblez les pièces pour reconstituer l'image</p>
+        </header>
+
+        <div class="game-options">
+            <div class="difficulty-selection">
+                <h2>Choisissez un niveau</h2>
+                <div class="difficulty-buttons">
+                    <button id="easy" class="difficulty-btn active">Facile</button>
+                    <button id="medium" class="difficulty-btn">Moyen</button>
+                    <button id="hard" class="difficulty-btn">Difficile</button>
+                </div>
+                <div class="difficulty-info">
+                    <p id="easy-info" class="info-text active">3x3 (9 pièces)</p>
+                    <p id="medium-info" class="info-text">4x4 (16 pièces)</p>
+                    <p id="hard-info" class="info-text">6x6 (36 pièces)</p>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button id="start-btn" class="control-btn">Commencer</button>
+                <button id="shuffle-btn" class="control-btn" disabled>Mélanger</button>
+                <button id="reset-btn" class="control-btn" disabled>Recommencer</button>
+            </div>
+
+            <div class="timer-container">
+                <div class="timer">
+                    <span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="puzzle-container">
+                <div id="puzzle-board"></div>
+                <div id="puzzle-complete" class="hidden">
+                    <div class="congratulations">
+                        <h2>Félicitations !</h2>
+                        <p>Vous avez terminé le puzzle en <span id="completion-time">00:00</span></p>
+                        <button id="play-again-btn" class="control-btn">Jouer à nouveau</button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-container">
+                <h3>Aperçu</h3>
+                <div class="preview-image">
+                    <img id="preview" src="" alt="Aperçu du puzzle">
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Jeu de puzzle créé avec HTML, CSS et JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
